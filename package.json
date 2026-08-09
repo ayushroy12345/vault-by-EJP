@@ -1,6 +1,6 @@
 {
-  "name": "vaultapp",
-  "version": "0.1.0",
+  "name": "founder-vault",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,9 +9,20 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.2.12",
+    "@radix-ui/react-accordion": "^1.2.20",
+    "@radix-ui/react-slot": "^1.3.3",
+    "@supabase/supabase-js": "^2.112.2",
+    "cashfree-pg": "^6.0.4",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.43.0",
+    "geist": "^1.7.2",
+    "lucide-react": "^1.28.0",
+    "next": "^15.5.22",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "resend": "^6.18.1",
+    "tailwind-merge": "^3.6.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -19,7 +30,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.12",
+    "eslint-config-next": "^15.5.22",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
