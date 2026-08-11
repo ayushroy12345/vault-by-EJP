@@ -27,11 +27,12 @@ export async function sendFulfillmentEmail({
   accessUrl: string;
 }) {
   const firstName = (customerName ?? "there").split(" ")[0];
-  const from = process.env.RESEND_FROM ?? "Founder Vault <deliveries@entrepreneursjantaparty.com>";
+  const from = process.env.RESEND_FROM ?? "Founder Vault <vault@entrepreneursjantaparty.com>";
 
   const { error } = await getResend().emails.send({
     from,
     to,
+    replyTo: "entrepreneursjantaparty@gmail.com",
     subject: "Welcome to Founder Vault — Your Access Is Ready",
     html: `<!DOCTYPE html>
 <html lang="en">
@@ -69,7 +70,7 @@ export async function sendFulfillmentEmail({
                 </table>
                 <p style="margin:0;font-size:12px;line-height:1.5;color:#9a9a9a;">
                   This link is personal to you — please don't share it. Questions?
-                  <a href="mailto:entrepreneursjantaparty@mail.com" style="color:#111111;">Contact us</a>.
+                  <a href="mailto:entrepreneursjantaparty@gmail.com" style="color:#111111;">Contact us</a>.
                 </p>
               </td>
             </tr>
